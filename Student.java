@@ -20,9 +20,23 @@ public class Student {
 		grades.add(grade);
 	}
 
-
-
 	public Student() {}
+	public Student(String name) {
+		this.name = name;
+	}
+	public Student(String name, double age) {
+		this(name);
+		this.age = age;
+	}
+
+	public void addClass();
+	/*
+	public void addClass()
+
+	public void dropClass();
+	*/
+
+
 
 	public void addClass(){
 
