@@ -7,7 +7,7 @@ public class Student {
 	double age;
 	int grade;
 	double gpa;
-	ArrayList<course> courses;
+	ArrayList<Course> courses;
 
 	public Student() {}
 	public Student(String name) {
