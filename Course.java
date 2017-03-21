@@ -3,5 +3,4 @@ class Course {
     String subject;
     String description;
 
-
 }
