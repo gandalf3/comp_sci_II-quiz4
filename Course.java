@@ -18,6 +18,6 @@ class Course {
         String validGrades = new String("ABCDF");
         int n = validGrades.length();
         char grade = validGrades.charAt(rand.nextInt(n));
-        grades.add(grade);
+        //grades.add(grade);
     }
 }
