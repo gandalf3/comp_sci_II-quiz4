@@ -2,7 +2,11 @@ import java.util.Date;
 import java.text.DateFormat;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 public class Student implements GradedStudent {
+=======
+public class Student extends Role {
+>>>>>>> 9d231ed9d5af56192e7d4c1288645ff1b243b7cf
 	String name;
 	double age;
 	int grade;
