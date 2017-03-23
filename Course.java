@@ -16,7 +16,7 @@ class Course {
 
     public void setGrade(){
         String validGrades = new String("ABCDF");
-        int n = validGrades.length;
+        int n = validGrades.length();
         char grade = validGrades.charAt(rand.nextInt(n));
         grades.add(grade);
     }
