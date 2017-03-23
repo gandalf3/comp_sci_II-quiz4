@@ -2,16 +2,13 @@ import java.util.Date;
 import java.text.DateFormat;
 import java.util.ArrayList;
 
-public class Student {
+public class Student implements GradedStudent {
 	String name;
 	double age;
 	int grade;
 	private double gpa;
 
 	ArrayList<Course> courses;
-	ArrayList<Character> grades = new ArrayList<>();
-
-
 
 	public Student() {	}
 	public Student(String name) {
@@ -60,4 +57,13 @@ public class Student {
 	public void dropClass(String removeCourse){
         courses.remove(removeCourse);
 	}
+
+	private StudentCourseView extends Course{
+        ArrayList<Character> grades = new ArrayList<>();
+
+        public ArrayList<Character> setGrade(ArrayList<Character> grades){
+            
+        }
+
+    }
 }
