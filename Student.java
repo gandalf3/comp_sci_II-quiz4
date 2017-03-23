@@ -1,26 +1,19 @@
 import java.util.Date;
 import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Student {
 	String name;
 	double age;
 	int grade;
-	double gpa;
+	private double gpa;
 
 	ArrayList<Course> courses;
-	ArrayList<grades> grades;
+	ArrayList<Character> grades = new ArrayList<>();
 
-	Random rand = new Random();
-	String alphabet = "ABCDF";
-	int n = alphabet.length();
-	for (int grades : courses){
-		char grade = alphabet.charAt(r.nextInt(N));
-		grades.add(grade);
-	}
 
-	public Student() {}
+
+	public Student() {	}
 	public Student(String name) {
 		this.name = name;
 	}
@@ -29,56 +22,42 @@ public class Student {
 		this.age = age;
 	}
 
-	public void addClass();
-	/*
-	public void addClass()
+	public String getName(){
+	    String name = this.name;
+	    return name;
+    }
+    private void setGPA(double gpa){
+        int score = 0;
+        int numOfCourses = 0;
+        for (char grade : grades){
+            if (grade == 'A'){
+                score+=4;
+                numOfCourses ++;
+            }else if (grade=='B'){
+                score+='3';
+                numOfCourses++;
+            }else if(grade =='C'){
+                score+=2;
+                numOfCourses++;
+            }else if (grade=='D'){
+                score+=1;numOfCourses++;
+            }else{
+                numOfCourses++;
+            }
+        }
+        gpa = score/numOfCourses;
+    }
 
-	public void dropClass();
-	*/
+    public double getGPA(double gpa){
+        return gpa;
+    }
 
-
-
-	public void addClass(){
-
+	public void addClass(String addName){
+        Course course = new Course(addName);
+        courses.add(course);
 	}
 
-	public void dropClass(){
-
+	public void dropClass(String removeCourse){
+        courses.remove(removeCourse);
 	}
-
-	public int modifyGradeLevel(int grade, String direction){
-		if (direction=="+"){
-			grade++;
-		}else if (direction=="-"){
-			grade--;
-		}
-	}
-
-	public static double gpaCalculator(double gpa, ArrayList grades){
-		int result;
-		int score;
-		int numOfGrades = 0;
-		for (grade : grades){
-			if (grade == 'A'){
-				score+=4;
-				numOfGrades ++;
-			}else if (grade='B'){
-				score+='3';
-				numOfGrades++;
-			}else if(grade =='C'){
-				score+=2;
-				numOfGrades++;
-			}else if (grade='D'){
-				score+=1;numOfGrades++;
-			}else{
-				numOfGrades++;
-			}
-		}
-
-		result = score/numOfGrades;
-		return result;
-	}
-
-
-
 }

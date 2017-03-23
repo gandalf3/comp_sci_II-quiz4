@@ -1,8 +1,9 @@
+import java.util.Random;
 class Course {
     String title;
     String subject;
     String description;
-    ArrayList<Course> prereqs;
+    Random rand = new Random();
     int crn;
 
     public Course(String title) {
@@ -13,4 +14,10 @@ class Course {
       this.subject = subject;
     }
 
+    public void setGrade(){
+        String validGrades = new String("ABCDF");
+        int n = validGrades.length;
+        char grade = validGrades.charAt(rand.nextInt(n));
+        grades.add(grade);
+    }
 }
